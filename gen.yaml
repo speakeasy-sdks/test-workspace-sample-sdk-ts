@@ -1,0 +1,16 @@
+configVersion: 1.0.0
+generation:
+  comments:
+    disableComments: false
+    omitDescriptionIfSummaryPresent: false
+  baseServerURL: ""
+  repoURL: https://github.com/speakeasy-sdks/test-workspace-sample-sdk.git
+  sdkClassName: Whitelabel-E-wallet
+  singleTagPerOp: false
+  tagNamespacingDisabled: false
+typescript:
+  version: 0.0.1
+  author: test-workspace
+  clientServerStatusCodesAsErrors: true
+  maxMethodParams: 0
+  packageName: Whitelabel-E-wallet
