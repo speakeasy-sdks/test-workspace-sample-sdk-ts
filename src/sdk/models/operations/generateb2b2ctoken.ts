@@ -6,7 +6,7 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { AxiosResponse } from "axios";
 import { Expose, Type } from "class-transformer";
 
-export class GenerateB2b2cTokenRequestBodyAdditionalInfo extends SpeakeasyBase {
+export class AdditionalInfo extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "merchantId" })
     merchantId?: string;
@@ -15,8 +15,8 @@ export class GenerateB2b2cTokenRequestBodyAdditionalInfo extends SpeakeasyBase {
 export class GenerateB2b2cTokenRequestBody extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "additionalInfo" })
-    @Type(() => GenerateB2b2cTokenRequestBodyAdditionalInfo)
-    additionalInfo?: GenerateB2b2cTokenRequestBodyAdditionalInfo;
+    @Type(() => AdditionalInfo)
+    additionalInfo?: AdditionalInfo;
 
     @SpeakeasyMetadata()
     @Expose({ name: "authCode" })
@@ -44,7 +44,7 @@ export class GenerateB2b2cTokenRequest extends SpeakeasyBase {
 /**
  * Generate B2B2C token response
  */
-export class GenerateB2b2cToken200ApplicationJSON extends SpeakeasyBase {
+export class GenerateB2b2cTokenResponseBody extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "accessToken" })
     accessToken?: string;
@@ -96,5 +96,5 @@ export class GenerateB2b2cTokenResponse extends SpeakeasyBase {
      * Generate B2B2C token response
      */
     @SpeakeasyMetadata()
-    generateB2b2cToken200ApplicationJSONObject?: GenerateB2b2cToken200ApplicationJSON;
+    object?: GenerateB2b2cTokenResponseBody;
 }

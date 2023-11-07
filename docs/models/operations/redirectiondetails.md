@@ -1,4 +1,4 @@
-# GenerateWebviewRequestBodyRedirectionDetails
+# RedirectionDetails
 
 
 ## Fields

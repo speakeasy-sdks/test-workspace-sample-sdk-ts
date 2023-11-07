@@ -6,7 +6,7 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { AxiosResponse } from "axios";
 import { Expose, Type } from "class-transformer";
 
-export class TopupInquiryRequestBodyAmount extends SpeakeasyBase {
+export class TopupInquiryAmount extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "currency" })
     currency?: string;
@@ -23,8 +23,8 @@ export class TopupInquiryRequestBody extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "amount" })
-    @Type(() => TopupInquiryRequestBodyAmount)
-    amount?: TopupInquiryRequestBodyAmount;
+    @Type(() => TopupInquiryAmount)
+    amount?: TopupInquiryAmount;
 
     @SpeakeasyMetadata()
     @Expose({ name: "merchantId" })

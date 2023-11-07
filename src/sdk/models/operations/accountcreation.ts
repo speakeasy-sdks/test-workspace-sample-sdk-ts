@@ -51,7 +51,7 @@ export class AccountCreationRequest extends SpeakeasyBase {
 /**
  * Account Creation response
  */
-export class AccountCreation200ApplicationJSON extends SpeakeasyBase {
+export class AccountCreationResponseBody extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "partnerReferenceNo" })
     partnerReferenceNo?: string;
@@ -103,5 +103,5 @@ export class AccountCreationResponse extends SpeakeasyBase {
      * Account Creation response
      */
     @SpeakeasyMetadata()
-    accountCreation200ApplicationJSONObject?: AccountCreation200ApplicationJSON;
+    object?: AccountCreationResponseBody;
 }

@@ -6,7 +6,7 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { AxiosResponse } from "axios";
 import { Expose, Type } from "class-transformer";
 
-export class AuthPaymentWithdrawRequestBodyAmount extends SpeakeasyBase {
+export class Amount extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "currency" })
     currency?: string;
@@ -23,8 +23,8 @@ export class AuthPaymentWithdrawRequestBody extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "amount" })
-    @Type(() => AuthPaymentWithdrawRequestBodyAmount)
-    amount?: AuthPaymentWithdrawRequestBodyAmount;
+    @Type(() => Amount)
+    amount?: Amount;
 
     @SpeakeasyMetadata()
     @Expose({ name: "merchantId" })

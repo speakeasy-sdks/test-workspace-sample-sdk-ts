@@ -1,4 +1,4 @@
-# AccountCreation200ApplicationJSON
+# AccountCreationResponseBody
 
 Account Creation response
 

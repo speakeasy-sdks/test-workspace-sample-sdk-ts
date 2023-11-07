@@ -1,4 +1,4 @@
-# TopupRequestBodyAmount
+# TopupAmount
 
 
 ## Fields

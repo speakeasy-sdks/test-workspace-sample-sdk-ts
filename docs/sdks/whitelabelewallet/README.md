@@ -148,7 +148,7 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 (async() => {
   const sdk = new WhitelabelEWallet();
 
-  const res = await sdk.whitelabelEWallet.accountBinding({
+  const res = await sdk.accountBinding({
     channelID: "95221",
     requestBody: {
       authCode: "76a345deaccf47d2ac786c1a3184f987",
@@ -160,6 +160,7 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     xSignature: "57e850c5daaa6c8afb60801f9f47245b9ceef63cf76a46c1eb717e5e9174e260ce8dff1fde0a9870139840d081b4ff2c3a6a38bb2ce9df7e4115d2d61071b690957b328fa6dfb29b3305c7e596c96accc4f2515e7a5bae720062606c29b6500979bca96220e838da85c2312647ce837df49f6fa1ccf89c33aa9c46287074f1e70fc20dbada8ebee81177b18b001dabfd4464487c41d3f124178583d152339547e25b5bbbc6dfd4ec3d498e07f70dd1f91e4968c1798578c3a967be7ac0b43fb988c9a36598cba9344a9cbb4f8b0b55d533f73c6966f96f6f29945e28fbdf8a180cf51451a28ac588ba4a94f53c1c6e64977c641daac8fd195157e3fb589be45c",
     xTimestamp: "2023-06-05T09:55:32+07:00",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -192,7 +193,7 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 (async() => {
   const sdk = new WhitelabelEWallet();
 
-  const res = await sdk.whitelabelEWallet.accountCreation({
+  const res = await sdk.accountCreation({
     channelID: "95221",
     requestBody: {
       email: "test_WE_06@email.com",
@@ -206,6 +207,7 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     xSignature: "57e850c5daaa6c8afb60801f9f47245b9ceef63cf76a46c1eb717e5e9174e260ce8dff1fde0a9870139840d081b4ff2c3a6a38bb2ce9df7e4115d2d61071b690957b328fa6dfb29b3305c7e596c96accc4f2515e7a5bae720062606c29b6500979bca96220e838da85c2312647ce837df49f6fa1ccf89c33aa9c46287074f1e70fc20dbada8ebee81177b18b001dabfd4464487c41d3f124178583d152339547e25b5bbbc6dfd4ec3d498e07f70dd1f91e4968c1798578c3a967be7ac0b43fb988c9a36598cba9344a9cbb4f8b0b55d533f73c6966f96f6f29945e28fbdf8a180cf51451a28ac588ba4a94f53c1c6e64977c641daac8fd195157e3fb589be45c",
     xTimestamp: "2023-05-31T13:17:11+07:00",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -238,7 +240,7 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 (async() => {
   const sdk = new WhitelabelEWallet();
 
-  const res = await sdk.whitelabelEWallet.authCaptureWithdraw({
+  const res = await sdk.authCaptureWithdraw({
     authorizationCustomer: "Bearer {{b2b2c_token}}",
     channelID: "95221",
     requestBody: {
@@ -259,6 +261,7 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     xSignature: "57e850c5daaa6c8afb60801f9f47245b9ceef63cf76a46c1eb717e5e9174e260ce8dff1fde0a9870139840d081b4ff2c3a6a38bb2ce9df7e4115d2d61071b690957b328fa6dfb29b3305c7e596c96accc4f2515e7a5bae720062606c29b6500979bca96220e838da85c2312647ce837df49f6fa1ccf89c33aa9c46287074f1e70fc20dbada8ebee81177b18b001dabfd4464487c41d3f124178583d152339547e25b5bbbc6dfd4ec3d498e07f70dd1f91e4968c1798578c3a967be7ac0b43fb988c9a36598cba9344a9cbb4f8b0b55d533f73c6966f96f6f29945e28fbdf8a180cf51451a28ac588ba4a94f53c1c6e64977c641daac8fd195157e3fb589be45c",
     xTimestamp: "2023-06-20T13:17:11+07:00",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -291,7 +294,7 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 (async() => {
   const sdk = new WhitelabelEWallet();
 
-  const res = await sdk.whitelabelEWallet.authPaymentWithdraw({
+  const res = await sdk.authPaymentWithdraw({
     authorizationCustomer: "Bearer {{b2b2c_token}}",
     channelID: "95221",
     requestBody: {
@@ -310,6 +313,7 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     xSignature: "57e850c5daaa6c8afb60801f9f47245b9ceef63cf76a46c1eb717e5e9174e260ce8dff1fde0a9870139840d081b4ff2c3a6a38bb2ce9df7e4115d2d61071b690957b328fa6dfb29b3305c7e596c96accc4f2515e7a5bae720062606c29b6500979bca96220e838da85c2312647ce837df49f6fa1ccf89c33aa9c46287074f1e70fc20dbada8ebee81177b18b001dabfd4464487c41d3f124178583d152339547e25b5bbbc6dfd4ec3d498e07f70dd1f91e4968c1798578c3a967be7ac0b43fb988c9a36598cba9344a9cbb4f8b0b55d533f73c6966f96f6f29945e28fbdf8a180cf51451a28ac588ba4a94f53c1c6e64977c641daac8fd195157e3fb589be45c",
     xTimestamp: "2023-06-20T13:17:11+07:00",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -342,7 +346,7 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 (async() => {
   const sdk = new WhitelabelEWallet();
 
-  const res = await sdk.whitelabelEWallet.authQueryWithdraw({
+  const res = await sdk.authQueryWithdraw({
     authorizationCustomer: "Bearer {{b2b2c_token}}",
     channelID: "95221",
     requestBody: {
@@ -357,6 +361,7 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     xSignature: "57e850c5daaa6c8afb60801f9f47245b9ceef63cf76a46c1eb717e5e9174e260ce8dff1fde0a9870139840d081b4ff2c3a6a38bb2ce9df7e4115d2d61071b690957b328fa6dfb29b3305c7e596c96accc4f2515e7a5bae720062606c29b6500979bca96220e838da85c2312647ce837df49f6fa1ccf89c33aa9c46287074f1e70fc20dbada8ebee81177b18b001dabfd4464487c41d3f124178583d152339547e25b5bbbc6dfd4ec3d498e07f70dd1f91e4968c1798578c3a967be7ac0b43fb988c9a36598cba9344a9cbb4f8b0b55d533f73c6966f96f6f29945e28fbdf8a180cf51451a28ac588ba4a94f53c1c6e64977c641daac8fd195157e3fb589be45c",
     xTimestamp: "2023-06-20T13:17:11+07:00",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -389,7 +394,7 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 (async() => {
   const sdk = new WhitelabelEWallet();
 
-  const res = await sdk.whitelabelEWallet.authRefundWithdraw({
+  const res = await sdk.authRefundWithdraw({
     authorizationCustomer: "Bearer {{b2b2c_token}}",
     channelID: "95221",
     requestBody: {
@@ -410,6 +415,7 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     xSignature: "57e850c5daaa6c8afb60801f9f47245b9ceef63cf76a46c1eb717e5e9174e260ce8dff1fde0a9870139840d081b4ff2c3a6a38bb2ce9df7e4115d2d61071b690957b328fa6dfb29b3305c7e596c96accc4f2515e7a5bae720062606c29b6500979bca96220e838da85c2312647ce837df49f6fa1ccf89c33aa9c46287074f1e70fc20dbada8ebee81177b18b001dabfd4464487c41d3f124178583d152339547e25b5bbbc6dfd4ec3d498e07f70dd1f91e4968c1798578c3a967be7ac0b43fb988c9a36598cba9344a9cbb4f8b0b55d533f73c6966f96f6f29945e28fbdf8a180cf51451a28ac588ba4a94f53c1c6e64977c641daac8fd195157e3fb589be45c",
     xTimestamp: "2023-06-20T13:17:11+07:00",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -442,7 +448,7 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 (async() => {
   const sdk = new WhitelabelEWallet();
 
-  const res = await sdk.whitelabelEWallet.authVoidWithdraw({
+  const res = await sdk.authVoidWithdraw({
     authorizationCustomer: "Bearer {{b2b2c_token}}",
     channelID: "95221",
     requestBody: {
@@ -463,6 +469,7 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     xSignature: "57e850c5daaa6c8afb60801f9f47245b9ceef63cf76a46c1eb717e5e9174e260ce8dff1fde0a9870139840d081b4ff2c3a6a38bb2ce9df7e4115d2d61071b690957b328fa6dfb29b3305c7e596c96accc4f2515e7a5bae720062606c29b6500979bca96220e838da85c2312647ce837df49f6fa1ccf89c33aa9c46287074f1e70fc20dbada8ebee81177b18b001dabfd4464487c41d3f124178583d152339547e25b5bbbc6dfd4ec3d498e07f70dd1f91e4968c1798578c3a967be7ac0b43fb988c9a36598cba9344a9cbb4f8b0b55d533f73c6966f96f6f29945e28fbdf8a180cf51451a28ac588ba4a94f53c1c6e64977c641daac8fd195157e3fb589be45c",
     xTimestamp: "2023-06-20T13:17:11+07:00",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -495,7 +502,7 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 (async() => {
   const sdk = new WhitelabelEWallet();
 
-  const res = await sdk.whitelabelEWallet.generateB2b2cToken({
+  const res = await sdk.generateB2b2cToken({
     requestBody: {
       additionalInfo: {
         merchantId: "AYOPOP",
@@ -507,6 +514,7 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     xSignature: "57e850c5daaa6c8afb60801f9f47245b9ceef63cf76a46c1eb717e5e9174e260ce8dff1fde0a9870139840d081b4ff2c3a6a38bb2ce9df7e4115d2d61071b690957b328fa6dfb29b3305c7e596c96accc4f2515e7a5bae720062606c29b6500979bca96220e838da85c2312647ce837df49f6fa1ccf89c33aa9c46287074f1e70fc20dbada8ebee81177b18b001dabfd4464487c41d3f124178583d152339547e25b5bbbc6dfd4ec3d498e07f70dd1f91e4968c1798578c3a967be7ac0b43fb988c9a36598cba9344a9cbb4f8b0b55d533f73c6966f96f6f29945e28fbdf8a180cf51451a28ac588ba4a94f53c1c6e64977c641daac8fd195157e3fb589be45c",
     xTimestamp: "2023-10-06T18:47:02+07:00",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -539,7 +547,7 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 (async() => {
   const sdk = new WhitelabelEWallet();
 
-  const res = await sdk.whitelabelEWallet.generateB2bToken({
+  const res = await sdk.generateB2bToken({
     requestBody: {
       additionalInfo: {
         merchantId: "AYOPOP",
@@ -550,6 +558,7 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     xSignature: "57e850c5daaa6c8afb60801f9f47245b9ceef63cf76a46c1eb717e5e9174e260ce8dff1fde0a9870139840d081b4ff2c3a6a38bb2ce9df7e4115d2d61071b690957b328fa6dfb29b3305c7e596c96accc4f2515e7a5bae720062606c29b6500979bca96220e838da85c2312647ce837df49f6fa1ccf89c33aa9c46287074f1e70fc20dbada8ebee81177b18b001dabfd4464487c41d3f124178583d152339547e25b5bbbc6dfd4ec3d498e07f70dd1f91e4968c1798578c3a967be7ac0b43fb988c9a36598cba9344a9cbb4f8b0b55d533f73c6966f96f6f29945e28fbdf8a180cf51451a28ac588ba4a94f53c1c6e64977c641daac8fd195157e3fb589be45c",
     xTimestamp: "2023-10-06T18:47:02+07:00",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -582,7 +591,7 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 (async() => {
   const sdk = new WhitelabelEWallet();
 
-  const res = await sdk.whitelabelEWallet.generateWebview({
+  const res = await sdk.generateWebview({
     channelId: "95221",
     requestBody: {
       merchantId: "AYOPOP",
@@ -601,6 +610,7 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     xSignature: "57e850c5daaa6c8afb60801f9f47245b9ceef63cf76a46c1eb717e5e9174e260ce8dff1fde0a9870139840d081b4ff2c3a6a38bb2ce9df7e4115d2d61071b690957b328fa6dfb29b3305c7e596c96accc4f2515e7a5bae720062606c29b6500979bca96220e838da85c2312647ce837df49f6fa1ccf89c33aa9c46287074f1e70fc20dbada8ebee81177b18b001dabfd4464487c41d3f124178583d152339547e25b5bbbc6dfd4ec3d498e07f70dd1f91e4968c1798578c3a967be7ac0b43fb988c9a36598cba9344a9cbb4f8b0b55d533f73c6966f96f6f29945e28fbdf8a180cf51451a28ac588ba4a94f53c1c6e64977c641daac8fd195157e3fb589be45c",
     xTimestamp: "2023-06-05T09:55:32+07:00",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -633,7 +643,7 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 (async() => {
   const sdk = new WhitelabelEWallet();
 
-  const res = await sdk.whitelabelEWallet.otpVerification({
+  const res = await sdk.otpVerification({
     channelID: "95221",
     requestBody: {
       merchantId: "AYOPOP",
@@ -646,6 +656,7 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     xSignature: "57e850c5daaa6c8afb60801f9f47245b9ceef63cf76a46c1eb717e5e9174e260ce8dff1fde0a9870139840d081b4ff2c3a6a38bb2ce9df7e4115d2d61071b690957b328fa6dfb29b3305c7e596c96accc4f2515e7a5bae720062606c29b6500979bca96220e838da85c2312647ce837df49f6fa1ccf89c33aa9c46287074f1e70fc20dbada8ebee81177b18b001dabfd4464487c41d3f124178583d152339547e25b5bbbc6dfd4ec3d498e07f70dd1f91e4968c1798578c3a967be7ac0b43fb988c9a36598cba9344a9cbb4f8b0b55d533f73c6966f96f6f29945e28fbdf8a180cf51451a28ac588ba4a94f53c1c6e64977c641daac8fd195157e3fb589be45c",
     xTimestamp: "2023-06-05T09:55:32+07:00",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -678,7 +689,7 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 (async() => {
   const sdk = new WhitelabelEWallet();
 
-  const res = await sdk.whitelabelEWallet.topup({
+  const res = await sdk.topup({
     authorizationCustomer: "Bearer {{b2b2c_token}}",
     channelID: "95221",
     requestBody: {
@@ -697,6 +708,7 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     xSignature: "57e850c5daaa6c8afb60801f9f47245b9ceef63cf76a46c1eb717e5e9174e260ce8dff1fde0a9870139840d081b4ff2c3a6a38bb2ce9df7e4115d2d61071b690957b328fa6dfb29b3305c7e596c96accc4f2515e7a5bae720062606c29b6500979bca96220e838da85c2312647ce837df49f6fa1ccf89c33aa9c46287074f1e70fc20dbada8ebee81177b18b001dabfd4464487c41d3f124178583d152339547e25b5bbbc6dfd4ec3d498e07f70dd1f91e4968c1798578c3a967be7ac0b43fb988c9a36598cba9344a9cbb4f8b0b55d533f73c6966f96f6f29945e28fbdf8a180cf51451a28ac588ba4a94f53c1c6e64977c641daac8fd195157e3fb589be45c",
     xTimestamp: "2023-06-20T13:17:11+07:00",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -729,7 +741,7 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 (async() => {
   const sdk = new WhitelabelEWallet();
 
-  const res = await sdk.whitelabelEWallet.topupInquiry({
+  const res = await sdk.topupInquiry({
     authorizationCustomer: "Bearer {{b2b2c_token}}",
     channelID: "95221",
     requestBody: {
@@ -747,6 +759,7 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     xSignature: "57e850c5daaa6c8afb60801f9f47245b9ceef63cf76a46c1eb717e5e9174e260ce8dff1fde0a9870139840d081b4ff2c3a6a38bb2ce9df7e4115d2d61071b690957b328fa6dfb29b3305c7e596c96accc4f2515e7a5bae720062606c29b6500979bca96220e838da85c2312647ce837df49f6fa1ccf89c33aa9c46287074f1e70fc20dbada8ebee81177b18b001dabfd4464487c41d3f124178583d152339547e25b5bbbc6dfd4ec3d498e07f70dd1f91e4968c1798578c3a967be7ac0b43fb988c9a36598cba9344a9cbb4f8b0b55d533f73c6966f96f6f29945e28fbdf8a180cf51451a28ac588ba4a94f53c1c6e64977c641daac8fd195157e3fb589be45c",
     xTimestamp: "2023-06-20T13:17:11+07:00",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -779,7 +792,7 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 (async() => {
   const sdk = new WhitelabelEWallet();
 
-  const res = await sdk.whitelabelEWallet.topupInquiryStatus({
+  const res = await sdk.topupInquiryStatus({
     authorizationCustomer: "Bearer {{b2b2c_token}}",
     channelID: "95221",
     requestBody: {
@@ -794,6 +807,7 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     xSignature: "57e850c5daaa6c8afb60801f9f47245b9ceef63cf76a46c1eb717e5e9174e260ce8dff1fde0a9870139840d081b4ff2c3a6a38bb2ce9df7e4115d2d61071b690957b328fa6dfb29b3305c7e596c96accc4f2515e7a5bae720062606c29b6500979bca96220e838da85c2312647ce837df49f6fa1ccf89c33aa9c46287074f1e70fc20dbada8ebee81177b18b001dabfd4464487c41d3f124178583d152339547e25b5bbbc6dfd4ec3d498e07f70dd1f91e4968c1798578c3a967be7ac0b43fb988c9a36598cba9344a9cbb4f8b0b55d533f73c6966f96f6f29945e28fbdf8a180cf51451a28ac588ba4a94f53c1c6e64977c641daac8fd195157e3fb589be45c",
     xTimestamp: "2023-06-20T13:17:11+07:00",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -826,7 +840,7 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 (async() => {
   const sdk = new WhitelabelEWallet();
 
-  const res = await sdk.whitelabelEWallet.walletbalanceCustomerMerchant({
+  const res = await sdk.walletbalanceCustomerMerchant({
     authorizationCustomer: "Bearer {{b2b2c_token}}",
     channelId: "95221",
     requestBody: {
@@ -840,6 +854,7 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     xSignature: "57e850c5daaa6c8afb60801f9f47245b9ceef63cf76a46c1eb717e5e9174e260ce8dff1fde0a9870139840d081b4ff2c3a6a38bb2ce9df7e4115d2d61071b690957b328fa6dfb29b3305c7e596c96accc4f2515e7a5bae720062606c29b6500979bca96220e838da85c2312647ce837df49f6fa1ccf89c33aa9c46287074f1e70fc20dbada8ebee81177b18b001dabfd4464487c41d3f124178583d152339547e25b5bbbc6dfd4ec3d498e07f70dd1f91e4968c1798578c3a967be7ac0b43fb988c9a36598cba9344a9cbb4f8b0b55d533f73c6966f96f6f29945e28fbdf8a180cf51451a28ac588ba4a94f53c1c6e64977c641daac8fd195157e3fb589be45c",
     xTimestamp: "2023-06-20T13:17:11+07:00",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -872,7 +887,7 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 (async() => {
   const sdk = new WhitelabelEWallet();
 
-  const res = await sdk.whitelabelEWallet.walletbalanceMerchant({
+  const res = await sdk.walletbalanceMerchant({
     channelId: "95221",
     requestBody: {
       merchantId: "AYOPOP",
@@ -883,6 +898,7 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     xSignature: "57e850c5daaa6c8afb60801f9f47245b9ceef63cf76a46c1eb717e5e9174e260ce8dff1fde0a9870139840d081b4ff2c3a6a38bb2ce9df7e4115d2d61071b690957b328fa6dfb29b3305c7e596c96accc4f2515e7a5bae720062606c29b6500979bca96220e838da85c2312647ce837df49f6fa1ccf89c33aa9c46287074f1e70fc20dbada8ebee81177b18b001dabfd4464487c41d3f124178583d152339547e25b5bbbc6dfd4ec3d498e07f70dd1f91e4968c1798578c3a967be7ac0b43fb988c9a36598cba9344a9cbb4f8b0b55d533f73c6966f96f6f29945e28fbdf8a180cf51451a28ac588ba4a94f53c1c6e64977c641daac8fd195157e3fb589be45c",
     xTimestamp: "2023-06-20T13:17:11+07:00",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

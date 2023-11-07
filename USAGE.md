@@ -7,7 +7,7 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 (async () => {
     const sdk = new WhitelabelEWallet();
 
-    const res = await sdk.whitelabelEWallet.accountBinding({
+    const res = await sdk.accountBinding({
         channelID: "95221",
         requestBody: {
             authCode: "76a345deaccf47d2ac786c1a3184f987",

@@ -1,4 +1,4 @@
-# GenerateB2b2cToken200ApplicationJSON
+# GenerateB2b2cTokenResponseBody
 
 Generate B2B2C token response
 

@@ -1,4 +1,4 @@
-# AuthCaptureWithdrawRequestBodyCaptureAmount
+# CaptureAmount
 
 
 ## Fields

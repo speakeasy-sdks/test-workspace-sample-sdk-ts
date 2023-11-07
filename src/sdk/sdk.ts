@@ -3,8 +3,8 @@
  */
 
 import * as utils from "../internal/utils";
-import * as errors from "./models/errors";
-import * as operations from "./models/operations";
+import * as errors from "../sdk/models/errors";
+import * as operations from "../sdk/models/operations";
 import axios from "axios";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse, RawAxiosRequestHeaders } from "axios";
 
@@ -48,9 +48,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0.0";
-    sdkVersion = "0.1.0";
-    genVersion = "2.172.0";
-    userAgent = "speakeasy-sdk/typescript 0.1.0 2.172.0 1.0.0 Whitelabel-E-wallet";
+    sdkVersion = "0.2.0";
+    genVersion = "2.181.1";
+    userAgent = "speakeasy-sdk/typescript 0.2.0 2.181.1 1.0.0 Whitelabel-E-wallet";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -336,9 +336,9 @@ export class WhitelabelEWallet {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.accountCreation200ApplicationJSONObject = utils.objectToClass(
+                    res.object = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.AccountCreation200ApplicationJSON
+                        operations.AccountCreationResponseBody
                     );
                 } else {
                     throw new errors.SDKError(
@@ -811,9 +811,9 @@ export class WhitelabelEWallet {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.generateB2b2cToken200ApplicationJSONObject = utils.objectToClass(
+                    res.object = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.GenerateB2b2cToken200ApplicationJSON
+                        operations.GenerateB2b2cTokenResponseBody
                     );
                 } else {
                     throw new errors.SDKError(
@@ -902,9 +902,9 @@ export class WhitelabelEWallet {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.generateB2bToken200ApplicationJSONObject = utils.objectToClass(
+                    res.object = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.GenerateB2bToken200ApplicationJSON
+                        operations.GenerateB2bTokenResponseBody
                     );
                 } else {
                     throw new errors.SDKError(

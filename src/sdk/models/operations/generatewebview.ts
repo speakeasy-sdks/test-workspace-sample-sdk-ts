@@ -6,7 +6,7 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { AxiosResponse } from "axios";
 import { Expose, Type } from "class-transformer";
 
-export class GenerateWebviewRequestBodyRedirectionDetails extends SpeakeasyBase {
+export class RedirectionDetails extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "failureMethod" })
     failureMethod?: string;
@@ -39,8 +39,8 @@ export class GenerateWebviewRequestBody extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "redirectionDetails" })
-    @Type(() => GenerateWebviewRequestBodyRedirectionDetails)
-    redirectionDetails?: GenerateWebviewRequestBodyRedirectionDetails;
+    @Type(() => RedirectionDetails)
+    redirectionDetails?: RedirectionDetails;
 
     @SpeakeasyMetadata()
     @Expose({ name: "registrationToken" })
