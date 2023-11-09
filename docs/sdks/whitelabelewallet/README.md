@@ -161,7 +161,6 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     xTimestamp: "2023-06-05T09:55:32+07:00",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -170,16 +169,20 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.AccountBindingRequest](../../models/operations/accountbindingrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `config`                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                         | :heavy_minus_sign:                                                                   | Available config options for making requests.                                        |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.AccountBindingRequest](../../sdk/models/operations/accountbindingrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `config`                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                             | :heavy_minus_sign:                                                                       | Available config options for making requests.                                            |
 
 
 ### Response
 
-**Promise<[operations.AccountBindingResponse](../../models/operations/accountbindingresponse.md)>**
+**Promise<[operations.AccountBindingResponse](../../sdk/models/operations/accountbindingresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## accountCreation
 
@@ -208,7 +211,6 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     xTimestamp: "2023-05-31T13:17:11+07:00",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -217,16 +219,20 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.AccountCreationRequest](../../models/operations/accountcreationrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `config`                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                           | :heavy_minus_sign:                                                                     | Available config options for making requests.                                          |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.AccountCreationRequest](../../sdk/models/operations/accountcreationrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `config`                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                               | :heavy_minus_sign:                                                                         | Available config options for making requests.                                              |
 
 
 ### Response
 
-**Promise<[operations.AccountCreationResponse](../../models/operations/accountcreationresponse.md)>**
+**Promise<[operations.AccountCreationResponse](../../sdk/models/operations/accountcreationresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## authCaptureWithdraw
 
@@ -262,7 +268,6 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     xTimestamp: "2023-06-20T13:17:11+07:00",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -271,16 +276,20 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.AuthCaptureWithdrawRequest](../../models/operations/authcapturewithdrawrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `config`                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                   | :heavy_minus_sign:                                                                             | Available config options for making requests.                                                  |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.AuthCaptureWithdrawRequest](../../sdk/models/operations/authcapturewithdrawrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `config`                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                       | :heavy_minus_sign:                                                                                 | Available config options for making requests.                                                      |
 
 
 ### Response
 
-**Promise<[operations.AuthCaptureWithdrawResponse](../../models/operations/authcapturewithdrawresponse.md)>**
+**Promise<[operations.AuthCaptureWithdrawResponse](../../sdk/models/operations/authcapturewithdrawresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## authPaymentWithdraw
 
@@ -314,7 +323,6 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     xTimestamp: "2023-06-20T13:17:11+07:00",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -323,16 +331,20 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.AuthPaymentWithdrawRequest](../../models/operations/authpaymentwithdrawrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `config`                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                   | :heavy_minus_sign:                                                                             | Available config options for making requests.                                                  |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.AuthPaymentWithdrawRequest](../../sdk/models/operations/authpaymentwithdrawrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `config`                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                       | :heavy_minus_sign:                                                                                 | Available config options for making requests.                                                      |
 
 
 ### Response
 
-**Promise<[operations.AuthPaymentWithdrawResponse](../../models/operations/authpaymentwithdrawresponse.md)>**
+**Promise<[operations.AuthPaymentWithdrawResponse](../../sdk/models/operations/authpaymentwithdrawresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## authQueryWithdraw
 
@@ -362,7 +374,6 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     xTimestamp: "2023-06-20T13:17:11+07:00",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -371,16 +382,20 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.AuthQueryWithdrawRequest](../../models/operations/authquerywithdrawrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `config`                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                               | :heavy_minus_sign:                                                                         | Available config options for making requests.                                              |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.AuthQueryWithdrawRequest](../../sdk/models/operations/authquerywithdrawrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `config`                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                   | :heavy_minus_sign:                                                                             | Available config options for making requests.                                                  |
 
 
 ### Response
 
-**Promise<[operations.AuthQueryWithdrawResponse](../../models/operations/authquerywithdrawresponse.md)>**
+**Promise<[operations.AuthQueryWithdrawResponse](../../sdk/models/operations/authquerywithdrawresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## authRefundWithdraw
 
@@ -416,7 +431,6 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     xTimestamp: "2023-06-20T13:17:11+07:00",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -425,16 +439,20 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.AuthRefundWithdrawRequest](../../models/operations/authrefundwithdrawrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `config`                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                 | :heavy_minus_sign:                                                                           | Available config options for making requests.                                                |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.AuthRefundWithdrawRequest](../../sdk/models/operations/authrefundwithdrawrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
 
 
 ### Response
 
-**Promise<[operations.AuthRefundWithdrawResponse](../../models/operations/authrefundwithdrawresponse.md)>**
+**Promise<[operations.AuthRefundWithdrawResponse](../../sdk/models/operations/authrefundwithdrawresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## authVoidWithdraw
 
@@ -470,7 +488,6 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     xTimestamp: "2023-06-20T13:17:11+07:00",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -479,16 +496,20 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.AuthVoidWithdrawRequest](../../models/operations/authvoidwithdrawrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `config`                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                             | :heavy_minus_sign:                                                                       | Available config options for making requests.                                            |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.AuthVoidWithdrawRequest](../../sdk/models/operations/authvoidwithdrawrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `config`                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                 | :heavy_minus_sign:                                                                           | Available config options for making requests.                                                |
 
 
 ### Response
 
-**Promise<[operations.AuthVoidWithdrawResponse](../../models/operations/authvoidwithdrawresponse.md)>**
+**Promise<[operations.AuthVoidWithdrawResponse](../../sdk/models/operations/authvoidwithdrawresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## generateB2b2cToken
 
@@ -515,7 +536,6 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     xTimestamp: "2023-10-06T18:47:02+07:00",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -524,16 +544,20 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.GenerateB2b2cTokenRequest](../../models/operations/generateb2b2ctokenrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `config`                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                 | :heavy_minus_sign:                                                                           | Available config options for making requests.                                                |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.GenerateB2b2cTokenRequest](../../sdk/models/operations/generateb2b2ctokenrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
 
 
 ### Response
 
-**Promise<[operations.GenerateB2b2cTokenResponse](../../models/operations/generateb2b2ctokenresponse.md)>**
+**Promise<[operations.GenerateB2b2cTokenResponse](../../sdk/models/operations/generateb2b2ctokenresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## generateB2bToken
 
@@ -559,7 +583,6 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     xTimestamp: "2023-10-06T18:47:02+07:00",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -568,16 +591,20 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.GenerateB2bTokenRequest](../../models/operations/generateb2btokenrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `config`                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                             | :heavy_minus_sign:                                                                       | Available config options for making requests.                                            |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.GenerateB2bTokenRequest](../../sdk/models/operations/generateb2btokenrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `config`                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                 | :heavy_minus_sign:                                                                           | Available config options for making requests.                                                |
 
 
 ### Response
 
-**Promise<[operations.GenerateB2bTokenResponse](../../models/operations/generateb2btokenresponse.md)>**
+**Promise<[operations.GenerateB2bTokenResponse](../../sdk/models/operations/generateb2btokenresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## generateWebview
 
@@ -611,7 +638,6 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     xTimestamp: "2023-06-05T09:55:32+07:00",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -620,16 +646,20 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.GenerateWebviewRequest](../../models/operations/generatewebviewrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `config`                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                           | :heavy_minus_sign:                                                                     | Available config options for making requests.                                          |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.GenerateWebviewRequest](../../sdk/models/operations/generatewebviewrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `config`                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                               | :heavy_minus_sign:                                                                         | Available config options for making requests.                                              |
 
 
 ### Response
 
-**Promise<[operations.GenerateWebviewResponse](../../models/operations/generatewebviewresponse.md)>**
+**Promise<[operations.GenerateWebviewResponse](../../sdk/models/operations/generatewebviewresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## otpVerification
 
@@ -657,7 +687,6 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     xTimestamp: "2023-06-05T09:55:32+07:00",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -666,16 +695,20 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.OtpVerificationRequest](../../models/operations/otpverificationrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `config`                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                           | :heavy_minus_sign:                                                                     | Available config options for making requests.                                          |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.OtpVerificationRequest](../../sdk/models/operations/otpverificationrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `config`                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                               | :heavy_minus_sign:                                                                         | Available config options for making requests.                                              |
 
 
 ### Response
 
-**Promise<[operations.OtpVerificationResponse](../../models/operations/otpverificationresponse.md)>**
+**Promise<[operations.OtpVerificationResponse](../../sdk/models/operations/otpverificationresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## topup
 
@@ -709,7 +742,6 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     xTimestamp: "2023-06-20T13:17:11+07:00",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -718,16 +750,20 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
 ### Parameters
 
-| Parameter                                                          | Type                                                               | Required                                                           | Description                                                        |
-| ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
-| `request`                                                          | [operations.TopupRequest](../../models/operations/topuprequest.md) | :heavy_check_mark:                                                 | The request object to use for the request.                         |
-| `config`                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)       | :heavy_minus_sign:                                                 | Available config options for making requests.                      |
+| Parameter                                                              | Type                                                                   | Required                                                               | Description                                                            |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| `request`                                                              | [operations.TopupRequest](../../sdk/models/operations/topuprequest.md) | :heavy_check_mark:                                                     | The request object to use for the request.                             |
+| `config`                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)           | :heavy_minus_sign:                                                     | Available config options for making requests.                          |
 
 
 ### Response
 
-**Promise<[operations.TopupResponse](../../models/operations/topupresponse.md)>**
+**Promise<[operations.TopupResponse](../../sdk/models/operations/topupresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## topupInquiry
 
@@ -760,7 +796,6 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     xTimestamp: "2023-06-20T13:17:11+07:00",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -769,16 +804,20 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `request`                                                                        | [operations.TopupInquiryRequest](../../models/operations/topupinquiryrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-| `config`                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                     | :heavy_minus_sign:                                                               | Available config options for making requests.                                    |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.TopupInquiryRequest](../../sdk/models/operations/topupinquiryrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `config`                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                         | :heavy_minus_sign:                                                                   | Available config options for making requests.                                        |
 
 
 ### Response
 
-**Promise<[operations.TopupInquiryResponse](../../models/operations/topupinquiryresponse.md)>**
+**Promise<[operations.TopupInquiryResponse](../../sdk/models/operations/topupinquiryresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## topupInquiryStatus
 
@@ -808,7 +847,6 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     xTimestamp: "2023-06-20T13:17:11+07:00",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -817,16 +855,20 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.TopupInquiryStatusRequest](../../models/operations/topupinquirystatusrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `config`                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                 | :heavy_minus_sign:                                                                           | Available config options for making requests.                                                |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.TopupInquiryStatusRequest](../../sdk/models/operations/topupinquirystatusrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
 
 
 ### Response
 
-**Promise<[operations.TopupInquiryStatusResponse](../../models/operations/topupinquirystatusresponse.md)>**
+**Promise<[operations.TopupInquiryStatusResponse](../../sdk/models/operations/topupinquirystatusresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## walletbalanceCustomerMerchant
 
@@ -855,7 +897,6 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     xTimestamp: "2023-06-20T13:17:11+07:00",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -864,16 +905,20 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [operations.WalletbalanceCustomerMerchantRequest](../../models/operations/walletbalancecustomermerchantrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-| `config`                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                       | :heavy_minus_sign:                                                                                                 | Available config options for making requests.                                                                      |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [operations.WalletbalanceCustomerMerchantRequest](../../sdk/models/operations/walletbalancecustomermerchantrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| `config`                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                           | :heavy_minus_sign:                                                                                                     | Available config options for making requests.                                                                          |
 
 
 ### Response
 
-**Promise<[operations.WalletbalanceCustomerMerchantResponse](../../models/operations/walletbalancecustomermerchantresponse.md)>**
+**Promise<[operations.WalletbalanceCustomerMerchantResponse](../../sdk/models/operations/walletbalancecustomermerchantresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## walletbalanceMerchant
 
@@ -899,7 +944,6 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     xTimestamp: "2023-06-20T13:17:11+07:00",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -908,13 +952,17 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.WalletbalanceMerchantRequest](../../models/operations/walletbalancemerchantrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `config`                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                       | :heavy_minus_sign:                                                                                 | Available config options for making requests.                                                      |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.WalletbalanceMerchantRequest](../../sdk/models/operations/walletbalancemerchantrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `config`                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                           | :heavy_minus_sign:                                                                                     | Available config options for making requests.                                                          |
 
 
 ### Response
 
-**Promise<[operations.WalletbalanceMerchantResponse](../../models/operations/walletbalancemerchantresponse.md)>**
+**Promise<[operations.WalletbalanceMerchantResponse](../../sdk/models/operations/walletbalancemerchantresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

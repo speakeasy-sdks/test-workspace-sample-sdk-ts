@@ -2,18 +2,18 @@ configVersion: 1.0.0
 management:
   docChecksum: dfbfac1cfd99bb11028a16f746df2a96
   docVersion: 1.0.0
-  speakeasyVersion: 1.114.1
-  generationVersion: 2.181.1
+  speakeasyVersion: 1.116.0
+  generationVersion: 2.185.0
 generation:
   comments: {}
   sdkClassName: Whitelabel-E-wallet
   repoURL: https://github.com/speakeasy-sdks/test-workspace-sample-sdk-ts.git
 features:
   typescript:
-    core: 3.1.0
+    core: 3.1.2
     globalServerURLs: 2.82.0
 typescript:
-  version: 0.2.0
+  version: 0.2.1
   author: test-workspace
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
@@ -25,7 +25,9 @@ typescript:
       operations: sdk/models/operations
       shared: sdk/models/shared
       webhooks: sdk/models/webhooks
+  inputModelSuffix: input
   installationURL: https://github.com/speakeasy-sdks/test-workspace-sample-sdk-ts
   maxMethodParams: 0
+  outputModelSuffix: output
   packageName: Whitelabel-E-wallet
   repoSubDirectory: .

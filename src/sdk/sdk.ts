@@ -48,9 +48,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0.0";
-    sdkVersion = "0.2.0";
-    genVersion = "2.181.1";
-    userAgent = "speakeasy-sdk/typescript 0.2.0 2.181.1 1.0.0 Whitelabel-E-wallet";
+    sdkVersion = "0.2.1";
+    genVersion = "2.185.0";
+    userAgent = "speakeasy-sdk/typescript 0.2.1 2.185.0 1.0.0 Whitelabel-E-wallet";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -185,7 +185,7 @@ export class WhitelabelEWallet {
             serverURL = ServerList[serverIdx];
         }
 
-        const defaultClient = props?.defaultClient ?? axios.create({ baseURL: serverURL });
+        const defaultClient = props?.defaultClient ?? axios.create();
         this.sdkConfiguration = new SDKConfiguration({
             defaultClient: defaultClient,
             serverURL: serverURL,
@@ -211,7 +211,7 @@ export class WhitelabelEWallet {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string =
+        const operationUrl: string =
             baseURL.replace(/\/$/, "") + "/wallet/api/v1.0/registration-account-binding";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
@@ -235,7 +235,7 @@ export class WhitelabelEWallet {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -288,7 +288,7 @@ export class WhitelabelEWallet {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string =
+        const operationUrl: string =
             baseURL.replace(/\/$/, "") + "/wallet/api/v1.0/registration-account-creation";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
@@ -312,7 +312,7 @@ export class WhitelabelEWallet {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -380,7 +380,7 @@ export class WhitelabelEWallet {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/wallet/api/v1.0/auth/capture";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/wallet/api/v1.0/auth/capture";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -403,7 +403,7 @@ export class WhitelabelEWallet {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -457,7 +457,7 @@ export class WhitelabelEWallet {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/wallet/api/v1.0/auth/payment";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/wallet/api/v1.0/auth/payment";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -480,7 +480,7 @@ export class WhitelabelEWallet {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -534,7 +534,7 @@ export class WhitelabelEWallet {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/wallet/api/v1.0/auth/query";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/wallet/api/v1.0/auth/query";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -557,7 +557,7 @@ export class WhitelabelEWallet {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -610,7 +610,7 @@ export class WhitelabelEWallet {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/wallet/api/v1.0/auth/refund";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/wallet/api/v1.0/auth/refund";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -633,7 +633,7 @@ export class WhitelabelEWallet {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -687,7 +687,7 @@ export class WhitelabelEWallet {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/wallet/api/v1.0/auth/void";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/wallet/api/v1.0/auth/void";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -710,7 +710,7 @@ export class WhitelabelEWallet {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -763,7 +763,8 @@ export class WhitelabelEWallet {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/wallet/api/v1.0/access-token/b2b2c";
+        const operationUrl: string =
+            baseURL.replace(/\/$/, "") + "/wallet/api/v1.0/access-token/b2b2c";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -786,7 +787,7 @@ export class WhitelabelEWallet {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -855,7 +856,8 @@ export class WhitelabelEWallet {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/wallet/api/v1.0/access-token/b2b";
+        const operationUrl: string =
+            baseURL.replace(/\/$/, "") + "/wallet/api/v1.0/access-token/b2b";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -878,7 +880,7 @@ export class WhitelabelEWallet {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -946,7 +948,7 @@ export class WhitelabelEWallet {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string =
+        const operationUrl: string =
             baseURL.replace(/\/$/, "") + "/wallet/api/v1.0/registration-account-webview";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
@@ -970,7 +972,7 @@ export class WhitelabelEWallet {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -1023,7 +1025,8 @@ export class WhitelabelEWallet {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/wallet/api/v1.0/otp-verification";
+        const operationUrl: string =
+            baseURL.replace(/\/$/, "") + "/wallet/api/v1.0/otp-verification";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -1046,7 +1049,7 @@ export class WhitelabelEWallet {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -1099,7 +1102,7 @@ export class WhitelabelEWallet {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/wallet/api/v1.0/emoney/topup";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/wallet/api/v1.0/emoney/topup";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -1122,7 +1125,7 @@ export class WhitelabelEWallet {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -1175,7 +1178,8 @@ export class WhitelabelEWallet {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/wallet/api/v1.0/emoney/account-inquiry";
+        const operationUrl: string =
+            baseURL.replace(/\/$/, "") + "/wallet/api/v1.0/emoney/account-inquiry";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -1198,7 +1202,7 @@ export class WhitelabelEWallet {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -1251,7 +1255,8 @@ export class WhitelabelEWallet {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/wallet/api/v1.0/emoney/topup-status";
+        const operationUrl: string =
+            baseURL.replace(/\/$/, "") + "/wallet/api/v1.0/emoney/topup-status";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -1274,7 +1279,7 @@ export class WhitelabelEWallet {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -1328,7 +1333,7 @@ export class WhitelabelEWallet {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string =
+        const operationUrl: string =
             baseURL.replace(/\/$/, "") + "/wallet/api/v1.0/balance-inquiry/customer-merchant";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
@@ -1352,7 +1357,7 @@ export class WhitelabelEWallet {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -1406,7 +1411,7 @@ export class WhitelabelEWallet {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string =
+        const operationUrl: string =
             baseURL.replace(/\/$/, "") + "/wallet/api/v1.0/balance-inquiry/merchant";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
@@ -1430,7 +1435,7 @@ export class WhitelabelEWallet {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
