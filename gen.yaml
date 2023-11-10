@@ -2,18 +2,20 @@ configVersion: 1.0.0
 management:
   docChecksum: dfbfac1cfd99bb11028a16f746df2a96
   docVersion: 1.0.0
-  speakeasyVersion: 1.116.0
-  generationVersion: 2.185.0
+  speakeasyVersion: 1.118.3
+  generationVersion: 2.187.7
 generation:
   comments: {}
   sdkClassName: Whitelabel-E-wallet
   repoURL: https://github.com/speakeasy-sdks/test-workspace-sample-sdk-ts.git
+  usageSnippets:
+    optionalPropertyRendering: withExample
 features:
   typescript:
-    core: 3.1.2
+    core: 3.1.3
     globalServerURLs: 2.82.0
 typescript:
-  version: 0.2.1
+  version: 0.2.2
   author: test-workspace
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true

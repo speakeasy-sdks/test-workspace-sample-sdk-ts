@@ -1,6 +1,4 @@
 <!-- Start SDK Example Usage -->
-
-
 ```typescript
 import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 

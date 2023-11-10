@@ -48,9 +48,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0.0";
-    sdkVersion = "0.2.1";
-    genVersion = "2.185.0";
-    userAgent = "speakeasy-sdk/typescript 0.2.1 2.185.0 1.0.0 Whitelabel-E-wallet";
+    sdkVersion = "0.2.2";
+    genVersion = "2.187.7";
+    userAgent = "speakeasy-sdk/typescript 0.2.2 2.187.7 1.0.0 Whitelabel-E-wallet";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -243,7 +243,7 @@ export class WhitelabelEWallet {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -251,7 +251,7 @@ export class WhitelabelEWallet {
 
         const res: operations.AccountBindingResponse = new operations.AccountBindingResponse({
             statusCode: httpRes.status,
-            contentType: contentType,
+            contentType: responseContentType,
             rawResponse: httpRes,
         });
         switch (true) {
@@ -320,7 +320,7 @@ export class WhitelabelEWallet {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -328,21 +328,21 @@ export class WhitelabelEWallet {
 
         const res: operations.AccountCreationResponse = new operations.AccountCreationResponse({
             statusCode: httpRes.status,
-            contentType: contentType,
+            contentType: responseContentType,
             rawResponse: httpRes,
             headers: utils.getHeadersFromResponse(httpRes.headers),
         });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.object = utils.objectToClass(
                         JSON.parse(decodedRes),
                         operations.AccountCreationResponseBody
                     );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -411,7 +411,7 @@ export class WhitelabelEWallet {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -420,7 +420,7 @@ export class WhitelabelEWallet {
         const res: operations.AuthCaptureWithdrawResponse =
             new operations.AuthCaptureWithdrawResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         switch (true) {
@@ -488,7 +488,7 @@ export class WhitelabelEWallet {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -497,7 +497,7 @@ export class WhitelabelEWallet {
         const res: operations.AuthPaymentWithdrawResponse =
             new operations.AuthPaymentWithdrawResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         switch (true) {
@@ -565,7 +565,7 @@ export class WhitelabelEWallet {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -573,7 +573,7 @@ export class WhitelabelEWallet {
 
         const res: operations.AuthQueryWithdrawResponse = new operations.AuthQueryWithdrawResponse({
             statusCode: httpRes.status,
-            contentType: contentType,
+            contentType: responseContentType,
             rawResponse: httpRes,
         });
         switch (true) {
@@ -641,7 +641,7 @@ export class WhitelabelEWallet {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -650,7 +650,7 @@ export class WhitelabelEWallet {
         const res: operations.AuthRefundWithdrawResponse =
             new operations.AuthRefundWithdrawResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         switch (true) {
@@ -718,7 +718,7 @@ export class WhitelabelEWallet {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -726,7 +726,7 @@ export class WhitelabelEWallet {
 
         const res: operations.AuthVoidWithdrawResponse = new operations.AuthVoidWithdrawResponse({
             statusCode: httpRes.status,
-            contentType: contentType,
+            contentType: responseContentType,
             rawResponse: httpRes,
         });
         switch (true) {
@@ -795,7 +795,7 @@ export class WhitelabelEWallet {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -804,21 +804,21 @@ export class WhitelabelEWallet {
         const res: operations.GenerateB2b2cTokenResponse =
             new operations.GenerateB2b2cTokenResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
                 headers: utils.getHeadersFromResponse(httpRes.headers),
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.object = utils.objectToClass(
                         JSON.parse(decodedRes),
                         operations.GenerateB2b2cTokenResponseBody
                     );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -888,7 +888,7 @@ export class WhitelabelEWallet {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -896,21 +896,21 @@ export class WhitelabelEWallet {
 
         const res: operations.GenerateB2bTokenResponse = new operations.GenerateB2bTokenResponse({
             statusCode: httpRes.status,
-            contentType: contentType,
+            contentType: responseContentType,
             rawResponse: httpRes,
             headers: utils.getHeadersFromResponse(httpRes.headers),
         });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.object = utils.objectToClass(
                         JSON.parse(decodedRes),
                         operations.GenerateB2bTokenResponseBody
                     );
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -980,7 +980,7 @@ export class WhitelabelEWallet {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -988,7 +988,7 @@ export class WhitelabelEWallet {
 
         const res: operations.GenerateWebviewResponse = new operations.GenerateWebviewResponse({
             statusCode: httpRes.status,
-            contentType: contentType,
+            contentType: responseContentType,
             rawResponse: httpRes,
         });
         switch (true) {
@@ -1057,7 +1057,7 @@ export class WhitelabelEWallet {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -1065,7 +1065,7 @@ export class WhitelabelEWallet {
 
         const res: operations.OtpVerificationResponse = new operations.OtpVerificationResponse({
             statusCode: httpRes.status,
-            contentType: contentType,
+            contentType: responseContentType,
             rawResponse: httpRes,
         });
         switch (true) {
@@ -1133,7 +1133,7 @@ export class WhitelabelEWallet {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -1141,7 +1141,7 @@ export class WhitelabelEWallet {
 
         const res: operations.TopupResponse = new operations.TopupResponse({
             statusCode: httpRes.status,
-            contentType: contentType,
+            contentType: responseContentType,
             rawResponse: httpRes,
         });
         switch (true) {
@@ -1210,7 +1210,7 @@ export class WhitelabelEWallet {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -1218,7 +1218,7 @@ export class WhitelabelEWallet {
 
         const res: operations.TopupInquiryResponse = new operations.TopupInquiryResponse({
             statusCode: httpRes.status,
-            contentType: contentType,
+            contentType: responseContentType,
             rawResponse: httpRes,
         });
         switch (true) {
@@ -1287,7 +1287,7 @@ export class WhitelabelEWallet {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -1296,7 +1296,7 @@ export class WhitelabelEWallet {
         const res: operations.TopupInquiryStatusResponse =
             new operations.TopupInquiryStatusResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         switch (true) {
@@ -1365,7 +1365,7 @@ export class WhitelabelEWallet {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -1374,7 +1374,7 @@ export class WhitelabelEWallet {
         const res: operations.WalletbalanceCustomerMerchantResponse =
             new operations.WalletbalanceCustomerMerchantResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         switch (true) {
@@ -1443,7 +1443,7 @@ export class WhitelabelEWallet {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -1452,7 +1452,7 @@ export class WhitelabelEWallet {
         const res: operations.WalletbalanceMerchantResponse =
             new operations.WalletbalanceMerchantResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         switch (true) {
