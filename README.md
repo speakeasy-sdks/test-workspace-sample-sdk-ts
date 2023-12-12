@@ -14,7 +14,7 @@ It has been generated successfully based on your OpenAPI spec. However, it is no
 - [ ] ♻️ Refine your SDK quickly by iterating locally with the [Speakeasy CLI](https://github.com/speakeasy-api/speakeasy)
 - [ ] 🎁 Publish your SDK to package managers by [configuring automatic publishing](https://www.speakeasyapi.dev/docs/productionize-sdks/publish-sdks)
 - [ ] ✨ When ready to productionize, delete this section from the README
-<!-- Start SDK Installation -->
+<!-- Start SDK Installation [installation] -->
 ## SDK Installation
 
 ### NPM
@@ -28,16 +28,17 @@ npm add https://github.com/speakeasy-sdks/test-workspace-sample-sdk-ts
 ```bash
 yarn add https://github.com/speakeasy-sdks/test-workspace-sample-sdk-ts
 ```
-<!-- End SDK Installation -->
+<!-- End SDK Installation [installation] -->
 
+<!-- Start SDK Example Usage [usage] -->
 ## SDK Example Usage
-<!-- Start SDK Example Usage -->
+
 ### Example
 
 ```typescript
 import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
-(async () => {
+async function run() {
     const sdk = new WhitelabelEWallet();
 
     const res = await sdk.accountBinding({
@@ -57,12 +58,14 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->
 
-<!-- Start SDK Available Operations -->
+<!-- Start Available Resources and Operations [operations] -->
 ## Available Resources and Operations
 
 ### [WhitelabelEWallet SDK](docs/sdks/whitelabelewallet/README.md)
@@ -83,13 +86,9 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 * [topupInquiryStatus](docs/sdks/whitelabelewallet/README.md#topupinquirystatus) - TopUp - Inquiry Status
 * [walletbalanceCustomerMerchant](docs/sdks/whitelabelewallet/README.md#walletbalancecustomermerchant) - WalletBalance - Customer Merchant
 * [walletbalanceMerchant](docs/sdks/whitelabelewallet/README.md#walletbalancemerchant) - WalletBalance - Merchant
-<!-- End SDK Available Operations -->
+<!-- End Available Resources and Operations [operations] -->
 
-<!-- Start Dev Containers -->
-
-<!-- End Dev Containers -->
-
-<!-- Start Error Handling -->
+<!-- Start Error Handling [errors] -->
 ## Error Handling
 
 Handling errors in this SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
@@ -103,7 +102,7 @@ Example
 ```typescript
 import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
-(async () => {
+async function run() {
     const sdk = new WhitelabelEWallet();
 
     let res;
@@ -121,26 +120,33 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
                 "57e850c5daaa6c8afb60801f9f47245b9ceef63cf76a46c1eb717e5e9174e260ce8dff1fde0a9870139840d081b4ff2c3a6a38bb2ce9df7e4115d2d61071b690957b328fa6dfb29b3305c7e596c96accc4f2515e7a5bae720062606c29b6500979bca96220e838da85c2312647ce837df49f6fa1ccf89c33aa9c46287074f1e70fc20dbada8ebee81177b18b001dabfd4464487c41d3f124178583d152339547e25b5bbbc6dfd4ec3d498e07f70dd1f91e4968c1798578c3a967be7ac0b43fb988c9a36598cba9344a9cbb4f8b0b55d533f73c6966f96f6f29945e28fbdf8a180cf51451a28ac588ba4a94f53c1c6e64977c641daac8fd195157e3fb589be45c",
             xTimestamp: "2023-06-05T09:55:32+07:00",
         });
-    } catch (e) {}
+    } catch (err) {
+        if (err instanceof errors.SDKError) {
+            console.error(err); // handle exception
+            throw err;
+        }
+    }
 
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
-<!-- End Error Handling -->
+<!-- End Error Handling [errors] -->
 
-<!-- Start Custom HTTP Client -->
+<!-- Start Custom HTTP Client [http-client] -->
 ## Custom HTTP Client
 
-The Typescript SDK makes API calls using the (axios)[https://axios-http.com/docs/intro] HTTP library.  In order to provide a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration, you can initialize the SDK client with a custom `AxiosInstance` object.
+The Typescript SDK makes API calls using the [axios](https://axios-http.com/docs/intro) HTTP library.  In order to provide a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration, you can initialize the SDK client with a custom `AxiosInstance` object.
 
 For example, you could specify a header for every request that your sdk makes as follows:
 
 ```typescript
-from Whitelabel-E-wallet import WhitelabelEWallet;
-import axios;
+import { Whitelabel-E-wallet } from "WhitelabelEWallet";
+import axios from "axios";
 
 const httpClient = axios.create({
     headers: {'x-custom-header': 'someValue'}
@@ -148,11 +154,11 @@ const httpClient = axios.create({
 
 const sdk = new WhitelabelEWallet({defaultClient: httpClient});
 ```
-<!-- End Custom HTTP Client -->
+<!-- End Custom HTTP Client [http-client] -->
 
 
 
-<!-- Start Server Selection -->
+<!-- Start Server Selection [server] -->
 ## Server Selection
 
 ### Select Server by Index
@@ -168,7 +174,7 @@ You can override the default server globally by passing a server index to the `s
 ```typescript
 import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
-(async () => {
+async function run() {
     const sdk = new WhitelabelEWallet({
         serverIdx: 0,
     });
@@ -190,7 +196,9 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
 
@@ -201,7 +209,7 @@ The default server can also be overridden globally by passing a URL to the `serv
 ```typescript
 import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
-(async () => {
+async function run() {
     const sdk = new WhitelabelEWallet({
         serverURL: "https://sandbox.api.of.ayoconnect.id",
     });
@@ -223,10 +231,12 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
-<!-- End Server Selection -->
+<!-- End Server Selection [server] -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

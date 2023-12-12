@@ -1,8 +1,8 @@
-<!-- Start SDK Example Usage -->
+<!-- Start SDK Example Usage [usage] -->
 ```typescript
 import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
-(async () => {
+async function run() {
     const sdk = new WhitelabelEWallet();
 
     const res = await sdk.accountBinding({
@@ -22,7 +22,9 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->

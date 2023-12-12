@@ -145,7 +145,7 @@ Account Binding
 ```typescript
 import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
-(async() => {
+async function run() {
   const sdk = new WhitelabelEWallet();
 
   const res = await sdk.accountBinding({
@@ -164,7 +164,9 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -193,7 +195,7 @@ Account CreationÐ
 ```typescript
 import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
-(async() => {
+async function run() {
   const sdk = new WhitelabelEWallet();
 
   const res = await sdk.accountCreation({
@@ -214,7 +216,9 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -243,7 +247,7 @@ Auth Capture - withdraw
 ```typescript
 import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
-(async() => {
+async function run() {
   const sdk = new WhitelabelEWallet();
 
   const res = await sdk.authCaptureWithdraw({
@@ -271,7 +275,9 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -300,7 +306,7 @@ Auth Payment - withdraw
 ```typescript
 import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
-(async() => {
+async function run() {
   const sdk = new WhitelabelEWallet();
 
   const res = await sdk.authPaymentWithdraw({
@@ -326,7 +332,9 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -355,7 +363,7 @@ Auth Query - withdraw
 ```typescript
 import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
-(async() => {
+async function run() {
   const sdk = new WhitelabelEWallet();
 
   const res = await sdk.authQueryWithdraw({
@@ -377,7 +385,9 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -406,7 +416,7 @@ Auth Refund - withdraw
 ```typescript
 import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
-(async() => {
+async function run() {
   const sdk = new WhitelabelEWallet();
 
   const res = await sdk.authRefundWithdraw({
@@ -434,7 +444,9 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -463,7 +475,7 @@ Auth Void - withdraw
 ```typescript
 import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
-(async() => {
+async function run() {
   const sdk = new WhitelabelEWallet();
 
   const res = await sdk.authVoidWithdraw({
@@ -491,7 +503,9 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -520,7 +534,7 @@ This API generates access token used in TopUp & Withdrawal flow.
 ```typescript
 import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
-(async() => {
+async function run() {
   const sdk = new WhitelabelEWallet();
 
   const res = await sdk.generateB2b2cToken({
@@ -539,7 +553,9 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -568,7 +584,7 @@ This API generates access token used in Authorization Headers of Customer Regist
 ```typescript
 import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
-(async() => {
+async function run() {
   const sdk = new WhitelabelEWallet();
 
   const res = await sdk.generateB2bToken({
@@ -586,7 +602,9 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -615,7 +633,7 @@ Generate WebView
 ```typescript
 import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
-(async() => {
+async function run() {
   const sdk = new WhitelabelEWallet();
 
   const res = await sdk.generateWebview({
@@ -641,7 +659,9 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -670,7 +690,7 @@ OTP Verification
 ```typescript
 import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
-(async() => {
+async function run() {
   const sdk = new WhitelabelEWallet();
 
   const res = await sdk.otpVerification({
@@ -690,7 +710,9 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -719,7 +741,7 @@ TopUp
 ```typescript
 import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
-(async() => {
+async function run() {
   const sdk = new WhitelabelEWallet();
 
   const res = await sdk.topup({
@@ -745,7 +767,9 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -774,7 +798,7 @@ TopUp- Inquiry
 ```typescript
 import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
-(async() => {
+async function run() {
   const sdk = new WhitelabelEWallet();
 
   const res = await sdk.topupInquiry({
@@ -799,7 +823,9 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -828,7 +854,7 @@ TopUp - Inquiry Status
 ```typescript
 import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
-(async() => {
+async function run() {
   const sdk = new WhitelabelEWallet();
 
   const res = await sdk.topupInquiryStatus({
@@ -850,7 +876,9 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -879,7 +907,7 @@ WalletBalance - Customer Merchant
 ```typescript
 import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
-(async() => {
+async function run() {
   const sdk = new WhitelabelEWallet();
 
   const res = await sdk.walletbalanceCustomerMerchant({
@@ -900,7 +928,9 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -929,7 +959,7 @@ WalletBalance - Merchant
 ```typescript
 import { WhitelabelEWallet } from "Whitelabel-E-wallet";
 
-(async() => {
+async function run() {
   const sdk = new WhitelabelEWallet();
 
   const res = await sdk.walletbalanceMerchant({
@@ -947,7 +977,9 @@ import { WhitelabelEWallet } from "Whitelabel-E-wallet";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

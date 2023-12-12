@@ -36,7 +36,6 @@ src/sdk/models/operations/walletbalancecustomermerchant.ts
 src/sdk/models/operations/walletbalancemerchant.ts
 src/sdk/models/errors/index.ts
 src/sdk/models/operations/index.ts
-USAGE.md
 docs/sdk/models/operations/accountbindingrequestbody.md
 docs/sdk/models/operations/accountbindingrequest.md
 docs/sdk/models/operations/accountbindingresponse.md
@@ -98,4 +97,5 @@ docs/sdk/models/operations/walletbalancemerchantrequestbody.md
 docs/sdk/models/operations/walletbalancemerchantrequest.md
 docs/sdk/models/operations/walletbalancemerchantresponse.md
 docs/sdks/whitelabelewallet/README.md
+USAGE.md
 .gitattributes
