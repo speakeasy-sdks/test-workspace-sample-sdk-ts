@@ -1,6 +1,6 @@
 {
   "name": "Whitelabel-E-wallet",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "author": "test-workspace",
   "scripts": {
     "prepare": "tsc --build",
